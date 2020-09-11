@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+#game {
+  position: absolute;
+  height: 100vh;
+  overflow: hidden;
+  background-color: white;
+  width: 100%;
+}
+
+.ball {
+  position: absolute;
+}
+
+.pin {
+  position: absolute;
+  height: 100px;
+  top: 0px;
+}
+
+@keyframes dissapear-anim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes hide-anim {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.dissapear {
+  animation: 0.2s ease-out 0s dissapear-anim forwards;
+}
+
+.hide {
+  animation: 2s ease-out 0s hide-anim forwards;
+}
+
+#score {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  text-align: center;
+  font-size: 7rem;
+
+  color: #333;
+}
+
+p {
+  margin: 0.5rem;
+}
+
+.score__amount {
+  font-family: "SF-Balloons";
+  font-weight: bold;
+}
+
+.score__max {
+  font-family: "SF-Balloons";
+  font-weight: bold;
+}
