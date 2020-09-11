@@ -155,7 +155,7 @@ function game() {
 
       gameTime += delta;
       globalDifficulty = clamp(gameTime / 60000 + 1, 1, 2);
-      globalWind = Math.cos(Date.now() / 1000) * 100 * globalDifficulty;
+      globalWind = Math.cos(Date.now() / 1000) * 400 * globalDifficulty;
 
       if (gameTime > 60000 && gameState !== "end") {
         gameState = "end";
