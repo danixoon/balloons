@@ -157,7 +157,7 @@ function game() {
       globalDifficulty = clamp(gameTime / 60000 + 1, 1, 2);
       globalWind = Math.cos(Date.now() / 1000) * 100 * globalDifficulty;
 
-      if (gameTime > 100 && gameState !== "end") {
+      if (gameTime > 60000 && gameState !== "end") {
         gameState = "end";
         document.getElementsByClassName("score__amount")[0].innerHTML = score;
         document.getElementsByClassName("score__max")[0].innerHTML = maxScore;
